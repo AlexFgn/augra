@@ -1,24 +1,25 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-// esto copiado de la pagina de primeng (linea 3 a 6)
+import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
-
 import { routes } from './app.routes';
+import { SimpleMarkdownPipe } from './shared/pipes/markdown.pipe';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-
-    // esto copiado de la pagina de primeng (linea 15 a 21)
+    provideHttpClient(),
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
         preset: Aura
       }
-    })
-
+    }),
+        importProvidersFrom(
+      SimpleMarkdownPipe
+    )
   ]
 };

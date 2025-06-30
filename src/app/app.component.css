@@ -14,10 +14,11 @@
     overflow: hidden; /*Evita scrool interno en el area principal*/
 }
 
-.chat-wrapper{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px;
-    height: 100%;
+/* Wrapper específico para el chat dentro del main content */
+.chat-wrapper {
+  display: flex;                 /* Contenedor flex para organizar sus hijos en columna */
+  flex-direction: column;        /* Dirección de los hijos en columna */
+  width: 100%;                   /* Ancho total disponible en su contenedor */
+  max-width: 600px;              /* Ancho máximo para limitar el chat en pantallas grandes */
+  height: 100%;                  /* Altura completa disponible del main-content */
 }

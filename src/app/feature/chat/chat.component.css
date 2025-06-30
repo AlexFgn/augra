@@ -1,0 +1,59 @@
+/*Contenedor principal del chat*/
+.chat-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-card{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px beige; /*sombra sutil*/
+}
+/*Ventana de escroll - donde aparecen los mensaje*/
+.chat-windows{
+    flex: 1;
+    overflow: hidden;
+}
+
+.chat-windows .p-scrollpanel-content{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: white;
+    overflow-y: auto; /*scroll vertical activado cuando el contenido excede el*/
+}
+
+/*margen lateral extra para las burbujas de mensaje*/
+
+.message{
+    margin: 0 1.5rem; /*margenes izquierdos y derecho para separar bordes*/
+}
+
+.message-header{
+    display:flex;
+    justify-content: space-between; /*separa extremoa autor izquierda*/
+    margin-bottom: 0.25rem;
+}
+
+.timestamp {
+    font-size: 0.8rem; /*tamaño de fuente mas pequeño*/
+    opacity: 0.7; /*texto atenuado para no competir con el principal*/
+}
+
+/*overplay de spinner de carga*/
+.spinner-overlay{
+    position: absolute; /*posicionamiento del contenedor padre*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /*se extiende por todo el contenedor*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.729);
+    z-index: 10;  /*colocar el overlay por encima de otros elementos */
+}
