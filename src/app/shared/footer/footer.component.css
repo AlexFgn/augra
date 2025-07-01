@@ -4,7 +4,6 @@
   display: flex !important;
   align-items: center !important;    /* Alinea verticalmente al centro */
   justify-content: center !important;/* Alinea horizontalmente al centro */
-
   /* Altura fija de 4rem para la barra inferior */
   height: 4rem;
 

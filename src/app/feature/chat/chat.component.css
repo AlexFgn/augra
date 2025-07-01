@@ -31,6 +31,7 @@
 
 .message{
     margin: 0 1.5rem; /*margenes izquierdos y derecho para separar bordes*/
+    font-size: 14px;
 }
 
 .message-header{
